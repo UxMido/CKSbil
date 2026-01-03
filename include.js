@@ -10,14 +10,15 @@ async function loadPartial(selector, url) {
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     await Promise.all([
-      loadPartial("#site-header", "./1header.html");
-      loadPartial("#site-footer", "./1footer.html");
+      loadPartial("#site-header", "./1header.html"),
+      loadPartial("#site-footer", "./1footer.html")
     ]);
 
     // kör init efter att partials finns i DOM
-    if (typeof window.CKS_init === "function") window.CKS_init();
+    if (typeof window.CKS_init === "function") {
+      window.CKS_init();
+    }
   } catch (e) {
     console.error(e);
   }
 });
-
