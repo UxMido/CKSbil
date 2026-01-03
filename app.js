@@ -3,10 +3,17 @@ window.CKS_init = function () {
   const y = document.getElementById("year");
   if (y) y.textContent = new Date().getFullYear();
 
-  // Active nav (rött streck)
-  const path = (location.pathname.split("/").pop() || "index.html").toLowerCase();
+  // ===== Active nav (rött streck) =====
+  // GitHub Pages: /CKSbil/om-oss.html osv. Vi matchar "filnamnet" i slutet.
+  const pathname = (window.location.pathname || "").toLowerCase();
+  const file = pathname.split("/").filter(Boolean).pop() || "index.html";
+
+  // Stöd både .active och .is-active så du inte fastnar i CSS-namn
   const navLinks = document.querySelectorAll(".nav a");
-  navLinks.forEach(a => a.classList.remove("active"));
+  navLinks.forEach(a => {
+    a.classList.remove("active");
+    a.classList.remove("is-active");
+  });
 
   const map = {
     "index.html": "hem",
@@ -16,13 +23,22 @@ window.CKS_init = function () {
     "kontakt.html": "kontakt",
   };
 
-  const key = map[path] || "";
-  const active = document.querySelector(`.nav a[data-nav="${key}"]`);
-  if (active) active.classList.add("active");
+  // Om man landar på /CKSbil/ (utan index.html)
+  const isRoot = pathname.endsWith("/cksbil/") || pathname.endsWith("/cksbil");
+  const key = isRoot ? "hem" : (map[file] || "");
 
-  // BOOKING MODAL
+  const active = document.querySelector(`.nav a[data-nav="${key}"]`);
+  if (active) {
+    active.classList.add("active");
+    active.classList.add("is-active");
+  }
+
+  // ===== BOOKING MODAL =====
+  // Obs: knappen i headern måste ha id="openBooking"
   const openBtn = document.getElementById("openBooking");
   const modal = document.getElementById("bookingModal");
+
+  // Kör inte "return" här, annars dör resten av init om modal saknas på en sida.
   if (!openBtn || !modal) return;
 
   const closeEls = modal.querySelectorAll("[data-bk-close]");
@@ -44,26 +60,30 @@ window.CKS_init = function () {
     });
     panels.forEach((p, i) => p.classList.toggle("is-active", i === step));
 
-    back.disabled = step === 0;
-    next.textContent = step === 3 ? "Skicka →" : "Fortsätt →";
+    if (back) back.disabled = step === 0;
+    if (next) next.textContent = step === 3 ? "Skicka →" : "Fortsätt →";
 
     const title = modal.querySelector("#bkTitle");
-    if (title) title.textContent =
-      step === 0 ? "Välj tjänst" :
-      step === 1 ? "Ditt fordon" :
-      step === 2 ? "Dina uppgifter" : "Granska";
+    if (title) {
+      title.textContent =
+        step === 0 ? "Välj tjänst" :
+        step === 1 ? "Ditt fordon" :
+        step === 2 ? "Dina uppgifter" : "Granska";
+    }
 
     if (step === 3) fillReview();
   }
 
-  function openModal() {
+  function openModal(e) {
+    if (e) e.preventDefault();
     modal.classList.add("is-open");
     modal.setAttribute("aria-hidden", "false");
     document.body.classList.add("no-scroll");
     setStep(0);
   }
 
-  function closeModal() {
+  function closeModal(e) {
+    if (e) e.preventDefault();
     modal.classList.remove("is-open");
     modal.setAttribute("aria-hidden", "true");
     document.body.classList.remove("no-scroll");
@@ -71,7 +91,10 @@ window.CKS_init = function () {
 
   function fillReview() {
     const get = (id) => (document.getElementById(id)?.value || "").trim();
-    const out = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val || "-"; };
+    const out = (id, val) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val || "-";
+    };
 
     out("bkOutService", state.service || "-");
     out("bkOutReg", get("bkReg"));
@@ -93,7 +116,6 @@ window.CKS_init = function () {
   steps.forEach(btn => {
     btn.addEventListener("click", () => {
       const target = Number(btn.dataset.step || "0");
-      // tillåt inte hoppa till review om ingen tjänst vald
       if (target > 0 && !state.service) return;
       setStep(target);
     });
@@ -107,34 +129,28 @@ window.CKS_init = function () {
     });
   });
 
-  back.addEventListener("click", () => setStep(step - 1));
+  if (back) back.addEventListener("click", () => setStep(step - 1));
 
-  next.addEventListener("click", () => {
-    if (step === 0) return;
+  if (next) {
+    next.addEventListener("click", () => {
+      if (step === 0) return;
 
-    if (step === 1) return setStep(2);
+      if (step === 1) return setStep(2);
 
-    if (step === 2) {
-      // enkel validering
-      const name = (document.getElementById("bkName")?.value || "").trim();
-      const email = (document.getElementById("bkEmail")?.value || "").trim();
-      if (!name || !email) {
-        alert("Fyll i namn och e-post.");
-        return;
+      if (step === 2) {
+        const name = (document.getElementById("bkName")?.value || "").trim();
+        const email = (document.getElementById("bkEmail")?.value || "").trim();
+        if (!name || !email) {
+          alert("Fyll i namn och e-post.");
+          return;
+        }
+        return setStep(3);
       }
-      return setStep(3);
-    }
 
-    if (step === 3) {
-      // demo “submit”
-      alert("Tack! (Demo) Vi återkommer med pris & tid.");
-      closeModal();
-    }
-  });
+      if (step === 3) {
+        alert("Tack! (Demo) Vi återkommer med pris & tid.");
+        closeModal();
+      }
+    });
+  }
 };
-
-window.CKS_init = function () {
-  // all nav / menu / klick-logik här
-};
-
-
