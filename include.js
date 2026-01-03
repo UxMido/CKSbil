@@ -10,8 +10,8 @@ async function loadPartial(selector, url) {
 document.addEventListener("DOMContentLoaded", async () => {
   try {
     await Promise.all([
-      loadPartial("#site-header", "./partials/1header.html"),
-      loadPartial("#site-footer", "./partials/1footer.html"),
+      loadPartial("#site-header", "./1header.html"),
+      loadPartial("#site-footer", "./1footer.html"),
     ]);
 
     // kör init efter att partials finns i DOM
@@ -20,3 +20,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     console.error(e);
   }
 });
+
