@@ -132,3 +132,9 @@ window.CKS_init = function () {
     }
   });
 };
+
+window.CKS_init = function () {
+  // all nav / menu / klick-logik här
+};
+
+
