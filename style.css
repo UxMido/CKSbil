@@ -342,10 +342,20 @@ p{margin:0 0 14px}
   border-radius:999px;
 }
 
+.hero-media{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
 .hero-media img{
   width:100%;
-  height:340px;
-  object-fit:cover;
+  max-width:520px;     /* kontroll på bredd */
+  height:auto;         /* ingen “stretch” */
+  max-height:320px;    /* kontroll på höjd */
+  object-fit:contain;  /* logga ska INTE beskäras */
+  padding:18px;        /* luft runt loggan */
+  background:#fff;     /* ser proffsigt ut */
   border-radius:var(--radius);
   border:1px solid rgba(0,0,0,.06);
   box-shadow:var(--shadow);
@@ -1194,3 +1204,4 @@ p{margin:0 0 14px}
   .bk-form-grid{ grid-template-columns: 1fr; }
   .bk-title{ font-size:22px; }
 }
+
