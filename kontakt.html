@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kontakt – CKS Bil & Motor</title>
+  <meta name="description" content="Kontakta CKS Bil & Motor i Uppsala. Ring, mejla eller skicka en bokningsförfrågan." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <!-- Header injectas -->
+  <div id="site-header"></div>
+
+  <main class="cks-contactPage">
+    <div class="wrap cks-contactWrap">
+
+      <!-- HERO (VIDEO) -->
+      <section class="cks-contactHero" aria-label="Kontakt hero">
+        <video autoplay muted loop playsinline preload="auto">
+          <source src="https://www.cksbil.se/wp-content/uploads/2025/12/Bilmakniker-pikar-pa-papper.mp4" type="video/mp4">
+        </video>
+        <div class="cks-contactHeroOverlay"></div>
+
+        <div class="cks-contactHeroInner">
+          <div class="cks-contactKicker">📞 Kontakt • Bokning</div>
+          <h1 class="cks-contactTitle">Kontakta oss</h1>
+          <p class="cks-contactSub">
+            Snabb återkoppling, tydlig kommunikation och trygga villkor – från första kontakt till färdig bil.
+          </p>
+
+          <div class="cks-contactCta">
+            <a class="btn primary" href="tel:0762948775">Ring 076 – 294 87 75</a>
+            <a class="btn ghost" href="mailto:info@cksbil.se">Mejla info@cksbil.se</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- GRID -->
+      <section class="cks-contactGrid" aria-label="Kontakt innehåll">
+
+        <!-- LEFT: FORM + INFO -->
+        <div class="cks-contactCard">
+          <h2 class="cks-contactH2">Skicka en bokningsförfrågan</h2>
+          <div class="cks-contactLine"></div>
+
+          <p class="cks-contactP">
+            Beskriv vad du behöver hjälp med. Skriv gärna <b>regnr</b>, bilmodell och vad som händer (ljud/felkoder).
+          </p>
+
+          <form id="contactForm" class="cks-contactForm">
+            <div class="cks-contactRow">
+              <label>
+                Namn
+                <input type="text" name="Namn" placeholder="Ditt namn" required>
+              </label>
+
+              <label>
+                Telefon
+                <input type="tel" name="Telefon" placeholder="07X..." required>
+              </label>
+            </div>
+
+            <div class="cks-contactRow">
+              <label>
+                E-post
+                <input type="email" name="E-post" placeholder="din@email.se" required>
+              </label>
+
+              <label>
+                Regnr (valfritt)
+                <input type="text" name="Regnr" id="contactRegnr" placeholder="ABC123 / ABC12A" maxlength="6">
+              </label>
+            </div>
+
+            <label>
+              Vad gäller det?
+              <select name="Tjänst" required>
+                <option value="" selected disabled>Välj tjänst</option>
+                <option>Service & reparation</option>
+                <option>Felsökning / diagnos</option>
+                <option>BMW retrofit</option>
+                <option>Däckservice</option>
+                <option>Annat</option>
+              </select>
+            </label>
+
+            <label>
+              Meddelande
+              <textarea name="Meddelande" placeholder="Beskriv problemet / önskemål..." required></textarea>
+            </label>
+
+            <!-- OBS: Statisk sida -> detta skickar inte mail ännu, visar bara bekräftelse -->
+            <button class="cks-contactBtn" type="submit">Skicka</button>
+
+            <div class="cks-contactSmall">
+              Genom att skicka godkänner du att vi kontaktar dig. (Ingen data delas med tredje part.)
+            </div>
+          </form>
+
+          <div class="cks-contactMiniCards">
+            <div class="cks-contactMini">
+              <div class="cks-contactMiniTop">
+                <span class="cks-contactDot"></span>
+                <b>Snabb återkoppling</b>
+              </div>
+              <span>Ofta samma dag, annars inom 24–48h.</span>
+            </div>
+
+            <div class="cks-contactMini">
+              <div class="cks-contactMiniTop">
+                <span class="cks-contactDot"></span>
+                <b>Tydligt pris</b>
+              </div>
+              <span>Du får alltid plan + prisbild innan vi kör igång.</span>
+            </div>
+
+            <div class="cks-contactMini">
+              <div class="cks-contactMiniTop">
+                <span class="cks-contactDot"></span>
+                <b>Tryggt & proffsigt</b>
+              </div>
+              <span>Vi jobbar strukturerat och kommunicerar rakt.</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- RIGHT: SIDEBAR -->
+        <aside class="cks-contactSide" aria-label="Kontaktuppgifter">
+          <h3>Kontaktuppgifter</h3>
+          <p>Välkommen till vår verkstad i Uppsala.</p>
+
+          <ul class="cks-contactList">
+            <li class="cks-contactLi">
+              <div>📍</div>
+              <div>
+                <strong>Adress</strong>
+                <small>Grafikgatan 21, 754 54 Uppsala</small>
+              </div>
+            </li>
+            <li class="cks-contactLi">
+              <div>📞</div>
+              <div>
+                <strong>Telefon</strong>
+                <small><a href="tel:0762948775">076 – 294 87 75</a></small>
+              </div>
+            </li>
+            <li class="cks-contactLi">
+              <div>✉️</div>
+              <div>
+                <strong>E-post</strong>
+                <small><a href="mailto:info@cksbil.se">info@cksbil.se</a></small>
+              </div>
+            </li>
+          </ul>
+
+          <div class="cks-contactHours">
+            <div class="cks-contactHoursTitle"><strong>Öppettider</strong></div>
+            <div class="cks-contactHoursGrid">
+              <div><span>Mån–Fre</span><span>08.00–17.00</span></div>
+              <div><span>Lunch</span><span>12.00–13.00</span></div>
+              <div><span>Lör–Sön</span><span>Stängt</span></div>
+            </div>
+          </div>
+
+          <div class="cks-contactSideActions">
+            <a class="btn primary" href="tel:0762948775">Ring nu</a>
+            <a class="btn ghost" href="https://www.google.com/maps?q=Grafikgatan+21,+Uppsala" target="_blank" rel="noopener">Öppna karta</a>
+          </div>
+
+          <div class="cks-contactMap">
+            <iframe
+              title="CKS Bil & Motor - Karta"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Grafikgatan%2021%2C%20Uppsala&output=embed"></iframe>
+          </div>
+        </aside>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- SUCCESS MODAL -->
+  <div id="contactSuccess" class="cks-contactSuccess" aria-hidden="true">
+    <div class="cks-contactSuccessBox" role="dialog" aria-modal="true" aria-label="Meddelande skickat">
+      <div class="cks-contactCheck">✓</div>
+      <h3>Skickat!</h3>
+      <p>Vi har tagit emot din förfrågan<br>och återkommer så snart vi kan.</p>
+      <button type="button" class="cks-contactClose" id="contactCloseBtn">Stäng</button>
+    </div>
+  </div>
+
+  <!-- Footer injectas -->
+  <div id="site-footer"></div>
+
+  <script src="./include.js"></script>
+  <script src="./app.js"></script>
+
+  <!-- Page script (demo-submit + modal) -->
+  <script>
+    (function(){
+      const form = document.getElementById('contactForm');
+      const reg = document.getElementById('contactRegnr');
+      const modal = document.getElementById('contactSuccess');
+      const closeBtn = document.getElementById('contactCloseBtn');
+
+      if(reg){
+        reg.addEventListener('input', () => {
+          reg.value = reg.value.replace(/\s+/g,'').toUpperCase();
+        });
+      }
+
+      function openModal(){
+        if(!modal) return;
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden','false');
+      }
+      function closeModal(){
+        if(!modal) return;
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden','true');
+      }
+
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          if(!form.checkValidity()){
+            form.reportValidity();
+            return;
+          }
+          openModal();
+          form.reset();
+        });
+      }
+
+      if(closeBtn) closeBtn.addEventListener('click', closeModal);
+      if(modal){
+        modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+      }
+
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+
+</body>
+</html>

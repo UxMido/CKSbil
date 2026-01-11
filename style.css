@@ -2597,3 +2597,489 @@ url('https://images.stockcake.com/public/4/e/8/4e8663ce-71ff-4c22-80f5-185575b1b
   .cks-tyreRow{grid-template-columns:1fr}
   .cks-tyreStats{grid-template-columns:1fr}
 }
+
+/* =========================
+   PRIVACY / INTEGRITET
+   ========================= */
+.cks-privacyPage{
+  --red:#e10600;
+  --dark:#111;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+  --bg:#f6f7f8;
+  --card:#ffffff;
+  color:var(--text);
+}
+
+.cks-privacyWrap{padding:44px 0}
+
+/* HERO */
+.cks-privacyHero{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  height:340px;
+  border:1px solid rgba(0,0,0,.08);
+}
+.cks-privacyHero video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  z-index:1;
+}
+.cks-privacyHeroOverlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(135deg, rgba(0,0,0,.78), rgba(0,0,0,.55)),
+    radial-gradient(800px 260px at 80% 10%, rgba(225,6,0,.35), transparent 60%);
+  z-index:2;
+}
+.cks-privacyHeroInner{
+  position:relative;
+  z-index:3;
+  padding:44px 28px;
+}
+
+.cks-privacyKicker{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  font-weight:900;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  font-size:12px;
+  color:#fff;
+  background:rgba(225,6,0,.16);
+  border:1px solid rgba(225,6,0,.35);
+  padding:8px 12px;
+  border-radius:999px;
+}
+
+.cks-privacyTitle{
+  margin:14px 0 8px 0;
+  color:#fff;
+  font-size:38px;
+  line-height:1.08;
+  letter-spacing:-.6px;
+}
+.cks-privacySub{
+  margin:0;
+  color:rgba(255,255,255,.86);
+  max-width:820px;
+  font-size:16.5px;
+  line-height:1.65;
+}
+
+.cks-privacyMeta{
+  margin-top:16px;
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+}
+.cks-privacyMetaItem{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:10px 12px;
+  border-radius:14px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  color:#fff;
+  font-weight:800;
+}
+.cks-privacyDot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 0 4px rgba(225,6,0,.18);
+}
+
+/* GRID */
+.cks-privacyGrid{
+  display:grid;
+  grid-template-columns:1.7fr 1fr;
+  gap:18px;
+  margin-top:18px;
+}
+.cks-privacyCard{
+  background:var(--card);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+}
+
+.cks-privacySection{
+  padding:18px;
+  border-radius:14px;
+  border:1px solid rgba(0,0,0,.06);
+  background:#fff;
+  margin-bottom:14px;
+}
+.cks-privacyH2{
+  font-size:18px;
+  margin:0 0 10px 0;
+  color:var(--dark);
+  letter-spacing:-.2px;
+}
+.cks-privacyLine{
+  height:3px;
+  width:52px;
+  background:var(--red);
+  border-radius:8px;
+  margin:10px 0 14px;
+}
+.cks-privacyP{
+  margin:0 0 12px 0;
+  color:rgba(0,0,0,.72);
+  font-size:15.8px;
+  line-height:1.75;
+}
+.cks-privacyList{
+  margin:10px 0 0 18px;
+  color:rgba(0,0,0,.72);
+  font-size:15.8px;
+  line-height:1.75;
+}
+.cks-privacySection:last-child{margin-bottom:0}
+
+/* SIDEBAR */
+.cks-privacySide{
+  background:linear-gradient(180deg,#111,#0c0c0c);
+  color:#fff;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.06);
+  position:sticky;
+  top:110px;
+  align-self:start;
+}
+.cks-privacySide::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;
+  height:4px;width:100%;
+  background:var(--red);
+}
+.cks-privacySide h3{margin:10px 0 6px 0;font-size:18px}
+.cks-privacySide p{margin:0 0 10px 0;color:rgba(255,255,255,.82);line-height:1.6}
+
+.cks-privacySideCard{
+  margin-top:12px;
+  display:grid;
+  gap:10px;
+}
+.cks-privacySideRow{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+  padding:12px;
+  border-radius:14px;
+}
+.cks-privacySideSmall{color:rgba(255,255,255,.72); margin-top:2px; line-height:1.5}
+
+.cks-privacyLink{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.22);
+}
+.cks-privacyLink:hover{border-bottom-color:var(--red)}
+
+.cks-privacyToc{
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.12);
+  display:grid;
+  gap:10px;
+}
+.cks-privacyTocTitle{
+  font-weight:900;
+  margin-bottom:2px;
+}
+.cks-privacyToc a{
+  color:#fff;
+  text-decoration:none;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.06);
+  padding:10px 12px;
+  border-radius:12px;
+  font-weight:800;
+}
+.cks-privacyToc a:hover{
+  border-color:rgba(225,6,0,.35);
+}
+
+.cks-privacyFoot{
+  margin-top:14px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.75);
+  font-size:13.5px;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .cks-privacyTitle{font-size:30px}
+  .cks-privacyHero{height:280px}
+  .cks-privacyHeroInner{padding:38px 18px}
+  .cks-privacyGrid{grid-template-columns:1fr}
+  .cks-privacySide{position:static;top:auto}
+}
+/* =========================
+   CONTACT PAGE
+   ========================= */
+.cks-contactPage{
+  --red:#e10600;
+  --dark:#111;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+  --bg:#f6f7f8;
+  --card:#ffffff;
+  color:var(--text);
+}
+
+.cks-contactWrap{padding:44px 0}
+
+/* HERO VIDEO */
+.cks-contactHero{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  height:340px;
+  border:1px solid rgba(0,0,0,.08);
+}
+.cks-contactHero video{
+  position:absolute; inset:0;
+  width:100%; height:100%;
+  object-fit:cover; object-position:center;
+  z-index:1;
+}
+.cks-contactHeroOverlay{
+  position:absolute; inset:0;
+  background:
+    linear-gradient(135deg, rgba(17,17,17,.92), rgba(17,17,17,.62)),
+    radial-gradient(800px 260px at 80% 10%, rgba(225,6,0,.35), transparent 60%);
+  z-index:2;
+}
+.cks-contactHeroInner{
+  position:relative;
+  z-index:3;
+  padding:44px 28px;
+}
+.cks-contactKicker{
+  display:inline-flex;gap:8px;align-items:center;
+  font-weight:900;letter-spacing:.8px;
+  text-transform:uppercase;font-size:12px;
+  color:#fff;background:rgba(225,6,0,.16);
+  border:1px solid rgba(225,6,0,.35);
+  padding:8px 12px;border-radius:999px;
+}
+.cks-contactTitle{
+  margin:14px 0 8px 0;
+  color:#fff;
+  font-size:38px;
+  line-height:1.08;
+  letter-spacing:-.6px;
+}
+.cks-contactSub{
+  margin:0;
+  color:rgba(255,255,255,.86);
+  max-width:760px;
+  font-size:16.5px;
+  line-height:1.65;
+}
+.cks-contactCta{margin-top:16px;display:flex;gap:10px;flex-wrap:wrap}
+
+/* GRID */
+.cks-contactGrid{
+  display:grid;
+  grid-template-columns: 1.7fr 1fr;
+  gap:18px;
+  margin-top:18px;
+}
+
+/* LEFT CARD */
+.cks-contactCard{
+  background:var(--card);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+}
+.cks-contactH2{font-size:18px;margin:0 0 10px 0;color:var(--dark)}
+.cks-contactLine{height:3px;width:52px;background:var(--red);border-radius:8px;margin:10px 0 14px}
+.cks-contactP{margin:0 0 12px 0;color:rgba(0,0,0,.72);font-size:15.8px;line-height:1.75}
+
+/* FORM */
+.cks-contactForm{display:grid;gap:12px;margin-top:10px}
+.cks-contactRow{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cks-contactForm label{display:grid;gap:6px;font-weight:800;color:var(--dark);font-size:13.5px}
+.cks-contactForm input,
+.cks-contactForm select,
+.cks-contactForm textarea{
+  width:100%;
+  border-radius:12px;
+  border:1px solid rgba(0,0,0,.10);
+  background:#fff;
+  color:var(--text);
+  padding:12px;
+  font-size:14px;
+  outline:none;
+}
+.cks-contactForm textarea{min-height:130px;resize:vertical}
+.cks-contactBtn{
+  border:none;
+  border-radius:12px;
+  padding:12px 14px;
+  font-weight:900;
+  cursor:pointer;
+  background:linear-gradient(180deg,#ff1a12,#e10600);
+  color:#fff;
+  box-shadow:0 12px 26px rgba(225,6,0,.22);
+}
+.cks-contactBtn:hover{filter:brightness(.97)}
+.cks-contactSmall{font-size:12.5px;color:rgba(0,0,0,.55);line-height:1.5}
+
+/* MINI CARDS */
+.cks-contactMiniCards{
+  margin-top:14px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+.cks-contactMini{
+  border-radius:14px;
+  border:1px solid rgba(0,0,0,.06);
+  background:var(--bg);
+  padding:12px;
+  display:grid;
+  gap:6px;
+  color:rgba(0,0,0,.70);
+  font-size:13.5px;
+  line-height:1.5;
+}
+.cks-contactMiniTop{display:flex;gap:10px;align-items:center;color:var(--dark)}
+.cks-contactDot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 0 4px rgba(225,6,0,.14);
+}
+
+/* RIGHT SIDEBAR */
+.cks-contactSide{
+  background:linear-gradient(180deg,#111,#0c0c0c);
+  color:#fff;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.06);
+  position:sticky;
+  top:110px;
+  align-self:start;
+}
+.cks-contactSide::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;
+  height:4px;width:100%;
+  background:var(--red);
+}
+.cks-contactSide h3{margin:10px 0 6px 0;font-size:18px}
+.cks-contactSide p{margin:0 0 10px 0;color:rgba(255,255,255,.82);line-height:1.6}
+
+.cks-contactList{list-style:none;margin:12px 0 0 0;padding:0;display:grid;gap:10px}
+.cks-contactLi{
+  display:flex;gap:10px;align-items:flex-start;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+  padding:12px;border-radius:14px;
+}
+.cks-contactLi strong{display:block}
+.cks-contactLi small{display:block;color:rgba(255,255,255,.72);margin-top:2px;line-height:1.5}
+.cks-contactLi a{color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.22)}
+.cks-contactLi a:hover{border-bottom-color:var(--red)}
+
+.cks-contactHours{margin-top:14px;padding-top:14px;border-top:1px solid rgba(255,255,255,.12)}
+.cks-contactHoursTitle{margin-bottom:8px}
+.cks-contactHoursGrid{display:grid;gap:8px}
+.cks-contactHoursGrid div{
+  display:flex;justify-content:space-between;
+  color:rgba(255,255,255,.86);
+  padding:10px 12px;
+  border-radius:14px;
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+}
+
+.cks-contactSideActions{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+.cks-contactSideActions .btn{border-color:rgba(255,255,255,.14)}
+.cks-contactSideActions .btn.ghost{background:rgba(255,255,255,.06);color:#fff}
+
+.cks-contactMap{
+  margin-top:14px;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+}
+.cks-contactMap iframe{width:100%;height:220px;border:0;display:block}
+
+/* SUCCESS MODAL */
+.cks-contactSuccess{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.cks-contactSuccessBox{
+  background:#fff;
+  border-radius:20px;
+  padding:34px 28px;
+  text-align:center;
+  max-width:420px;
+  width:90%;
+  box-shadow:0 30px 60px rgba(0,0,0,.35);
+  animation:cksContactPop .25s ease;
+}
+.cks-contactCheck{
+  width:80px;height:80px;border-radius:50%;
+  background:linear-gradient(180deg,#28c76f,#1fa75a);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:44px;font-weight:900;
+  margin:0 auto 16px;
+  box-shadow:0 12px 30px rgba(40,199,111,.45);
+}
+.cks-contactSuccessBox h3{margin:0 0 8px 0;font-size:26px;color:#111}
+.cks-contactSuccessBox p{margin:0 0 18px 0;color:#555;line-height:1.6}
+.cks-contactClose{
+  border:none;
+  background:#e10600;
+  color:#fff;
+  font-weight:900;
+  padding:12px 18px;
+  border-radius:12px;
+  cursor:pointer;
+}
+@keyframes cksContactPop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* Responsive */
+@media(max-width:900px){
+  .cks-contactTitle{font-size:30px}
+  .cks-contactHero{height:280px}
+  .cks-contactHeroInner{padding:38px 18px}
+  .cks-contactGrid{grid-template-columns:1fr}
+  .cks-contactRow{grid-template-columns:1fr}
+  .cks-contactMiniCards{grid-template-columns:1fr}
+  .cks-contactSide{position:static;top:auto}
+  .cks-contactMap iframe{height:240px}
+}
