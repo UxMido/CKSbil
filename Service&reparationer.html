@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Service & Reparation – CKS Bil & Motor</title>
+  <meta name="description" content="Service och reparation i Uppsala. Trygg verkstad med tydlig återkoppling, pris innan start och 1 års garanti på nya delar." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <!-- Header injectas -->
+  <div id="site-header"></div>
+
+  <main class="cks-svcPage">
+    <div class="wrap cks-svcWrap">
+
+      <!-- HERO -->
+      <section class="cks-svcHero" aria-label="Service och reparation hero">
+        <div class="cks-svcHeroInner">
+          <div class="cks-svcKicker">🔧 Bilreparationer & Service</div>
+
+          <h1 class="cks-svcTitle">Trygg service för alla bilmärken</h1>
+          <p class="cks-svcSub">
+            Vi utför service, reparationer och felsökning oavsett årsmodell.
+            Vi följer tillverkarens rekommendationer – och <b>återkommer alltid med pris & tid</b> innan vi kör igång.
+          </p>
+
+          <div class="cks-svcBadges">
+            <div class="cks-svcBadge"><span class="cks-svcDot"></span> 1 års garanti på nya reservdelar</div>
+            <div class="cks-svcBadge"><span class="cks-svcDot"></span> Tydlig återkoppling</div>
+            <div class="cks-svcBadge"><span class="cks-svcDot"></span> Service enligt specifikation</div>
+          </div>
+        </div>
+
+        <div class="cks-svcGlow" aria-hidden="true"></div>
+      </section>
+
+      <!-- GRID -->
+      <section class="cks-svcGrid" aria-label="Service och reparation innehåll">
+        <!-- LEFT -->
+        <div class="cks-svcCard">
+
+          <h2 class="cks-svcH2">Så går det till</h2>
+          <div class="cks-svcLine"></div>
+
+          <div class="cks-svcFlow" role="list">
+            <div class="cks-svcStep" role="listitem">
+              <div class="cks-svcNum">1</div>
+              <div>
+                <b>Skicka in förfrågan</b>
+                <span>Regnr + vad du behöver hjälp med. Ju tydligare, desto snabbare svar.</span>
+              </div>
+            </div>
+
+            <div class="cks-svcStep" role="listitem">
+              <div class="cks-svcNum">2</div>
+              <div>
+                <b>Vi granskar & återkopplar</b>
+                <span>Du får pris och tid. Inget bokas utan ditt OK.</span>
+              </div>
+            </div>
+
+            <div class="cks-svcStep" role="listitem">
+              <div class="cks-svcNum">3</div>
+              <div>
+                <b>Service / reparation</b>
+                <span>Vi utför jobbet enligt tillverkarens rekommendationer med fokus på kvalitet.</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cks-svcBlock">
+            <h2 class="cks-svcH2">Därför ska du välja oss</h2>
+            <div class="cks-svcLine"></div>
+
+            <div class="cks-svcTiles">
+              <div class="cks-svcTile">
+                <div class="cks-svcIc">📘</div>
+                <div><b>Service enligt specifikation</b><span>Vi följer bilens serviceprogram för bästa resultat.</span></div>
+              </div>
+
+              <div class="cks-svcTile">
+                <div class="cks-svcIc">👨‍🔧</div>
+                <div><b>Erfaren verkstad</b><span>Kompetens inom både mekanik och avancerad felsökning.</span></div>
+              </div>
+
+              <div class="cks-svcTile">
+                <div class="cks-svcIc">🛡️</div>
+                <div><b>1 års garanti</b><span>På nya reservdelar som köps av oss.</span></div>
+              </div>
+
+              <div class="cks-svcTile">
+                <div class="cks-svcIc">✅</div>
+                <div><b>Tydlig kommunikation</b><span>Du får alltid pris & tid innan vi startar arbetet.</span></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cks-svcBlock">
+            <h2 class="cks-svcH2">Vanliga ärenden</h2>
+            <div class="cks-svcLine"></div>
+            <p class="cks-svcP">
+              Service, bromsar, felsökning, oljeläckage, motorlampa, AC, batteri, startproblem,
+              ljud/vibrationer – skriv vad du märker så guidar vi dig rätt.
+            </p>
+          </div>
+
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="cks-svcSide" aria-label="Skicka förfrågan">
+          <h3>Skicka en förfrågan</h3>
+          <p>Vi återkommer med <b>pris & tid</b> så snart vi kan.</p>
+
+          <!-- Statisk demo: visar modal “Skickat!” -->
+          <form id="cksServiceForm" class="cks-svcForm" novalidate>
+            <div class="cks-svcRow">
+              <input type="text" name="namn" placeholder="Ditt namn" required>
+              <input type="email" name="epost" placeholder="Din e-post" required>
+            </div>
+
+            <div class="cks-svcRow">
+              <input type="text" name="telefon" placeholder="Telefon (valfritt)">
+              <input
+                type="text"
+                name="regnr"
+                id="cksRegnrService"
+                placeholder="Regnr (ABC123 / ABC12A)"
+                required
+                autocomplete="off"
+                autocapitalize="characters"
+                maxlength="6"
+                pattern="^[A-Za-z]{3}[0-9]{2}[0-9A-Za-z]{1}$"
+                title="Skriv regnummer som ABC123 eller ABC12A (3 bokstäver + 3 tecken, sista kan vara bokstav).">
+            </div>
+
+            <select name="tjanst" required>
+              <option value="" selected disabled>Välj typ av ärende…</option>
+              <option>Service</option>
+              <option>Reparation</option>
+              <option>Felsökning</option>
+              <option>Bromsar</option>
+              <option>AC / Klimat</option>
+              <option>Övrigt</option>
+            </select>
+
+            <input type="text" name="matarstallning" placeholder="Mätarställning (mil)">
+
+            <textarea name="meddelande" placeholder="Beskriv problemet kort (t.ex. ljud, varningslampa, när det händer)..." required></textarea>
+
+            <button class="cks-svcBtn" type="submit" id="cksServiceBtn">
+              <span class="cks-svcSpinner" id="cksServiceSpin"></span>
+              <span id="cksServiceBtnText">Skicka</span>
+            </button>
+
+            <div class="cks-svcMini">
+              ✉️ Skickas till <b>info@cksbil.se</b><br>
+              📞 <a class="cks-svcPhone" href="tel:0762948775">076 – 294 87 75</a>
+            </div>
+          </form>
+
+          <div class="cks-svcMap">
+            <iframe
+              title="CKS Bil & Motor karta"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              src="https://www.google.com/maps?q=Grafikgatan%2029%2C%20754%2054%20Uppsala&output=embed">
+            </iframe>
+          </div>
+        </aside>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- SUCCESS MODAL -->
+  <div id="cksServiceOk" class="cks-svcModal" aria-hidden="true">
+    <div class="cks-svcBox" role="dialog" aria-modal="true" aria-label="Skickat">
+      <div class="cks-svcCheck">✓</div>
+      <h3>Skickat!</h3>
+      <p>Tack! Vi har tagit emot din förfrågan.<br>Vi återkommer med pris & tid så snart vi kan.</p>
+      <button type="button" class="cks-svcClose" data-close="cksServiceOk">Stäng</button>
+    </div>
+  </div>
+
+  <!-- ERROR MODAL (finns kvar om du vill återkoppla fel senare) -->
+  <div id="cksServiceErr" class="cks-svcModal" aria-hidden="true">
+    <div class="cks-svcBox" role="dialog" aria-modal="true" aria-label="Kunde inte skicka">
+      <div class="cks-svcWarn">!</div>
+      <h3>Kunde inte skicka</h3>
+      <p id="cksServiceErrText">Testa igen eller ring oss.</p>
+      <button type="button" class="cks-svcClose" data-close="cksServiceErr">Stäng</button>
+    </div>
+  </div>
+
+  <!-- Footer injectas -->
+  <div id="site-footer"></div>
+
+  <script src="./include.js"></script>
+  <script src="./app.js"></script>
+
+  <script>
+    (function(){
+      const form = document.getElementById('cksServiceForm');
+      const reg  = document.getElementById('cksRegnrService');
+      const btn  = document.getElementById('cksServiceBtn');
+      const spin = document.getElementById('cksServiceSpin');
+      const btnText = document.getElementById('cksServiceBtnText');
+
+      const okModal  = document.getElementById('cksServiceOk');
+      const errModal = document.getElementById('cksServiceErr');
+
+      // Uppercase regnr live
+      if(reg){
+        reg.addEventListener('input', () => {
+          reg.value = reg.value.replace(/\s+/g,'').toUpperCase();
+        });
+      }
+
+      function setLoading(on){
+        if(!btn || !spin || !btnText) return;
+        btn.disabled = !!on;
+        spin.style.display = on ? 'inline-block' : 'none';
+        btnText.textContent = on ? 'Skickar…' : 'Skicka';
+      }
+
+      function openModal(m){
+        if(!m) return;
+        m.style.display = 'flex';
+        m.setAttribute('aria-hidden','false');
+      }
+      function closeModal(m){
+        if(!m) return;
+        m.style.display = 'none';
+        m.setAttribute('aria-hidden','true');
+      }
+
+      // Close modals
+      document.addEventListener('click', (e) => {
+        const closeId = e.target && e.target.getAttribute && e.target.getAttribute('data-close');
+        if(closeId){
+          closeModal(document.getElementById(closeId));
+          return;
+        }
+        if(e.target === okModal) closeModal(okModal);
+        if(e.target === errModal) closeModal(errModal);
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape'){
+          closeModal(okModal);
+          closeModal(errModal);
+        }
+      });
+
+      if(!form) return;
+
+      form.addEventListener('submit', function(e){
+        e.preventDefault();
+
+        if(!form.checkValidity()){
+          form.reportValidity();
+          return;
+        }
+
+        // Statisk: visa OK direkt
+        setLoading(true);
+        setTimeout(() => {
+          setLoading(false);
+          openModal(okModal);
+          form.reset();
+        }, 400);
+      });
+    })();
+  </script>
+
+</body>
+</html>

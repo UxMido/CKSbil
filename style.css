@@ -1205,3 +1205,1395 @@ p{margin:0 0 14px}
   .bk-title{ font-size:22px; }
 }
 
+/* =========================
+   LEGAL / KÖPVILLKOR
+   ========================= */
+.cks-legal{
+  --red:#e10600;
+  --dark:#111;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+  --bg:#f6f7f8;
+  --card:#ffffff;
+  color:var(--text);
+}
+
+.cks-legal-wrap{padding:44px 0}
+
+.cks-legal-hero{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  height:320px;
+  border:1px solid rgba(0,0,0,.08);
+}
+.cks-legal-video{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  z-index:1;
+}
+.cks-legal-heroOverlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(135deg, rgba(0,0,0,.78), rgba(0,0,0,.55)),
+    radial-gradient(800px 260px at 80% 10%, rgba(225,6,0,.35), transparent 60%);
+  z-index:2;
+}
+.cks-legal-heroInner{
+  position:relative;
+  z-index:3;
+  padding:44px 28px;
+}
+
+.cks-legal-kicker{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-weight:800;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  font-size:12px;
+  color:#fff;
+  background:rgba(225,6,0,.16);
+  border:1px solid rgba(225,6,0,.35);
+  padding:8px 12px;
+  border-radius:999px;
+}
+.cks-legal-title{
+  margin:14px 0 8px 0;
+  color:#fff;
+  font-size:38px;
+  line-height:1.08;
+  letter-spacing:-.6px;
+}
+.cks-legal-sub{
+  margin:0;
+  color:rgba(255,255,255,.86);
+  max-width:720px;
+  font-size:16.5px;
+  line-height:1.65;
+}
+
+.cks-legal-grid{
+  display:grid;
+  grid-template-columns:1.7fr 1fr;
+  gap:18px;
+  margin-top:18px;
+}
+
+.cks-legal-card{
+  background:var(--card);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+}
+
+.cks-legal-section{
+  padding:18px;
+  border-radius:14px;
+  border:1px solid rgba(0,0,0,.06);
+  background:#fff;
+  margin-bottom:14px;
+}
+.cks-legal-h2{
+  font-size:18px;
+  margin:0 0 10px 0;
+  color:var(--dark);
+  letter-spacing:-.2px;
+}
+.cks-legal-line{
+  height:3px;
+  width:52px;
+  background:var(--red);
+  border-radius:8px;
+  margin:10px 0 14px;
+}
+.cks-legal-section p{
+  margin:0 0 12px 0;
+  color:rgba(0,0,0,.72);
+  font-size:15.8px;
+  line-height:1.75;
+}
+.cks-legal-section p:last-child{margin-bottom:0}
+
+.cks-legal-side{
+  background:linear-gradient(180deg,#111,#0c0c0c);
+  color:#fff;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.06);
+  align-self:start;
+  position:sticky;
+  top:110px; /* justera om din header är högre */
+}
+.cks-legal-side::before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  height:4px;
+  width:100%;
+  background:var(--red);
+}
+.cks-legal-side h3{margin:10px 0 6px 0;font-size:18px}
+.cks-legal-side p{margin:0 0 10px 0;color:rgba(255,255,255,.82);line-height:1.6}
+
+.cks-legal-list{
+  list-style:none;
+  margin:12px 0 0 0;
+  padding:0;
+  display:grid;
+  gap:10px;
+}
+.cks-legal-li{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  background:rgba(255,255,255,.06);
+  border:1px solid rgba(255,255,255,.10);
+  padding:12px;
+  border-radius:14px;
+}
+.cks-legal-li strong{display:block}
+.cks-legal-li small{
+  display:block;
+  color:rgba(255,255,255,.72);
+  margin-top:2px;
+  line-height:1.5;
+}
+.cks-legal-li a{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.22);
+}
+.cks-legal-li a:hover{border-bottom-color:var(--red)}
+
+.cks-legal-foot{
+  margin-top:16px;
+  padding-top:14px;
+  border-top:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.78);
+  font-size:13.5px;
+}
+.cks-legal-hoursTitle{margin-top:10px}
+.cks-legal-hours{
+  display:grid;
+  gap:6px;
+  margin-top:8px;
+}
+.cks-legal-hours div{
+  display:flex;
+  justify-content:space-between;
+  color:rgba(255,255,255,.86);
+  background:rgba(255,255,255,.05);
+  border:1px solid rgba(255,255,255,.08);
+  padding:10px 12px;
+  border-radius:14px;
+}
+
+.cks-legal-linksTitle{margin-top:12px}
+.cks-legal-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 14px;
+  margin-top:8px;
+}
+.cks-legal-links a{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.18);
+  font-weight:700;
+}
+.cks-legal-links a:hover{border-bottom-color:var(--red)}
+
+@media (max-width: 900px){
+  .cks-legal-title{font-size:30px}
+  .cks-legal-grid{grid-template-columns:1fr}
+  .cks-legal-hero{height:260px}
+  .cks-legal-heroInner{padding:38px 18px}
+  .cks-legal-side{position:static;top:auto}
+}
+
+/* =========================
+   BMW RETROFIT PAGE
+   ========================= */
+.cks-bmwPage{
+  --red:#e10600;
+  --dark:#111;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+  --bg:#f6f7f8;
+  --card:#ffffff;
+  color:var(--text);
+}
+
+.cks-bmwWrap{padding:44px 0}
+
+/* HERO */
+.cks-bmwHero{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid rgba(0,0,0,.08);
+  background:
+    linear-gradient(135deg, rgba(0,0,0,.78), rgba(0,0,0,.55)),
+    radial-gradient(800px 260px at 80% 10%, rgba(225,6,0,.35), transparent 60%),
+    url('https://www.cksbil.se/wp-content/uploads/2020/04/banner-1.png');
+  background-size:cover;
+  background-position:center;
+}
+
+.cks-bmwHeroInner{padding:44px 28px; position:relative; z-index:2;}
+
+.cks-bmwKicker{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  font-weight:900;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  font-size:12px;
+  color:#fff;
+  background:rgba(225,6,0,.16);
+  border:1px solid rgba(225,6,0,.35);
+  padding:8px 12px;
+  border-radius:999px;
+}
+
+.cks-bmwIcon{
+  width:1em;
+  height:1em;
+  object-fit:contain;
+  vertical-align:-0.15em;
+  display:inline-block;
+  border-radius:4px;
+}
+
+.cks-bmwTitle{
+  margin:14px 0 8px 0;
+  color:#fff;
+  font-size:38px;
+  line-height:1.08;
+  letter-spacing:-.6px;
+}
+
+.cks-bmwSub{
+  margin:0;
+  color:rgba(255,255,255,.86);
+  max-width:760px;
+  font-size:16.5px;
+  line-height:1.65;
+}
+
+.cks-bmwQuick{
+  margin-top:16px;
+  display:grid;
+  gap:10px;
+  max-width:720px;
+}
+.cks-bmwQuickItem{
+  display:flex;
+  gap:10px;
+  align-items:center;
+  padding:12px 14px;
+  border-radius:14px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  color:#fff;
+  font-weight:800;
+}
+.cks-bmwDot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 0 4px rgba(225,6,0,.18);
+}
+
+/* Animated sweep */
+.cks-bmwSweep{
+  position:absolute;
+  inset:-40%;
+  background:
+    radial-gradient(420px 180px at 70% 30%, rgba(255,255,255,.08), transparent 60%),
+    radial-gradient(520px 260px at 25% 75%, rgba(225,6,0,.14), transparent 60%),
+    linear-gradient(120deg, transparent 30%, rgba(255,255,255,.10) 45%, transparent 60%);
+  transform:translateX(-35%);
+  animation:cksBmwSweep 7.5s ease-in-out infinite;
+  filter:blur(0px);
+  z-index:1;
+  pointer-events:none;
+}
+@keyframes cksBmwSweep{
+  0%   { transform:translateX(-38%) translateY(-4%); opacity:.55; }
+  50%  { transform:translateX(12%) translateY(2%);  opacity:.85; }
+  100% { transform:translateX(-38%) translateY(-4%); opacity:.55; }
+}
+
+/* GRID */
+.cks-bmwGrid{
+  display:grid;
+  grid-template-columns:1.3fr 1fr;
+  gap:18px;
+  margin-top:18px;
+}
+
+.cks-bmwCard{
+  background:var(--card);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+}
+
+.cks-bmwH2{font-size:18px;margin:0 0 10px 0;color:var(--dark)}
+.cks-bmwLine{height:3px;width:52px;background:var(--red);border-radius:8px;margin:10px 0 14px}
+.cks-bmwP{margin:0 0 12px 0;color:rgba(0,0,0,.72);font-size:15.8px;line-height:1.75}
+.cks-bmwBlock{margin-top:16px}
+
+/* ITEMS */
+.cks-bmwItems{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cks-bmwItem{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.06);
+  padding:12px;
+  border-radius:14px;
+}
+.cks-bmwIc{
+  width:36px;height:36px;border-radius:12px;
+  background:rgba(225,6,0,.12);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--red);font-weight:900;flex:0 0 auto;
+}
+.cks-bmwItem b{display:block;color:var(--dark);margin-bottom:2px}
+.cks-bmwItem span{display:block;color:var(--muted);font-size:13.5px;line-height:1.5}
+
+/* SIDE */
+.cks-bmwSide{
+  background:linear-gradient(180deg,#111,#0c0c0c);
+  color:#fff;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.06);
+  position:sticky;
+  top:110px;
+  align-self:start;
+}
+.cks-bmwSide::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;
+  height:4px;width:100%;
+  background:var(--red);
+}
+.cks-bmwSide h3{margin:10px 0 6px 0;font-size:18px}
+.cks-bmwSide p{margin:0 0 10px 0;color:rgba(255,255,255,.82);line-height:1.6}
+
+/* FORM */
+.cks-bmwForm{display:grid;gap:10px;margin-top:12px}
+.cks-bmwRow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cks-bmwForm input,
+.cks-bmwForm textarea{
+  width:100%;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  padding:12px;
+  font-size:14px;
+  outline:none;
+}
+.cks-bmwForm input::placeholder,
+.cks-bmwForm textarea::placeholder{color:rgba(255,255,255,.60)}
+.cks-bmwForm textarea{min-height:110px;resize:vertical}
+
+.cks-bmwBtn{
+  border:none;
+  border-radius:12px;
+  padding:12px 14px;
+  font-weight:900;
+  cursor:pointer;
+  background:linear-gradient(180deg,#ff1a12,#e10600);
+  color:#fff;
+  box-shadow:0 12px 26px rgba(225,6,0,.28);
+}
+.cks-bmwBtn:hover{filter:brightness(.97)}
+.cks-bmwHint{font-size:12.5px;color:rgba(255,255,255,.70);margin-top:8px}
+.cks-bmwPhone{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.25);
+}
+.cks-bmwPhone:hover{border-bottom-color:var(--red)}
+
+/* SUCCESS MODAL */
+.cks-bmwSuccess{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.cks-bmwSuccessBox{
+  background:#fff;
+  border-radius:20px;
+  padding:34px 28px;
+  text-align:center;
+  max-width:420px;
+  width:90%;
+  box-shadow:0 30px 60px rgba(0,0,0,.35);
+  animation:cksBmwPop .25s ease;
+}
+.cks-bmwCheck{
+  width:80px;height:80px;border-radius:50%;
+  background:linear-gradient(180deg,#28c76f,#1fa75a);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:44px;font-weight:900;
+  margin:0 auto 16px;
+  box-shadow:0 12px 30px rgba(40,199,111,.45);
+}
+.cks-bmwSuccessBox h3{margin:0 0 8px 0;font-size:26px;color:#111}
+.cks-bmwSuccessBox p{margin:0 0 18px 0;color:#555;line-height:1.6}
+.cks-bmwClose{
+  border:none;
+  background:#e10600;
+  color:#fff;
+  font-weight:900;
+  padding:12px 18px;
+  border-radius:12px;
+  cursor:pointer;
+}
+@keyframes cksBmwPop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* Responsive */
+@media(max-width:900px){
+  .cks-bmwTitle{font-size:30px}
+  .cks-bmwGrid{grid-template-columns:1fr}
+  .cks-bmwItems{grid-template-columns:1fr}
+  .cks-bmwSide{position:static;top:auto}
+  .cks-bmwRow{grid-template-columns:1fr}
+}
+
+/* =========================
+   SERVICE & REPARATION PAGE
+   ========================= */
+.cks-svcPage{
+  --red:#e10600;
+  --dark:#111;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+  --bg:#f6f7f8;
+  --card:#ffffff;
+  --ring:rgba(225,6,0,.28);
+  color:var(--text);
+}
+
+.cks-svcWrap{padding:44px 0}
+
+/* HERO */
+.cks-svcHero{
+  position:relative;
+  overflow:hidden;
+  border-radius:20px;
+  border:1px solid rgba(0,0,0,.08);
+  background:
+    radial-gradient(900px 360px at 78% 18%, rgba(225,6,0,.35), transparent 60%),
+    linear-gradient(135deg, rgba(0,0,0,.82), rgba(0,0,0,.52)),
+    url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1800&q=70');
+  background-size:cover;
+  background-position:center;
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+}
+
+.cks-svcHero::after{
+  content:"";
+  position:absolute;
+  inset:-2px;
+  background:radial-gradient(600px 200px at 12% 25%, rgba(255,255,255,.10), transparent 55%);
+  pointer-events:none;
+}
+
+.cks-svcHeroInner{position:relative;padding:46px 28px; z-index:2;}
+
+.cks-svcKicker{
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  font-weight:900;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  font-size:12px;
+  color:#fff;
+  background:rgba(225,6,0,.14);
+  border:1px solid rgba(225,6,0,.35);
+  padding:9px 12px;
+  border-radius:999px;
+}
+
+.cks-svcTitle{
+  margin:14px 0 10px 0;
+  color:#fff;
+  font-size:40px;
+  line-height:1.06;
+  letter-spacing:-.8px;
+}
+
+.cks-svcSub{
+  margin:0;
+  color:rgba(255,255,255,.86);
+  max-width:820px;
+  font-size:16.5px;
+  line-height:1.7;
+}
+
+.cks-svcBadges{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.cks-svcBadge{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  font-weight:900;
+  font-size:13px;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);
+  color:#fff;
+}
+.cks-svcDot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 0 4px rgba(225,6,0,.18);
+}
+
+/* Animated glow sweep */
+.cks-svcGlow{
+  position:absolute;
+  inset:-40%;
+  background:
+    radial-gradient(520px 220px at 20% 30%, rgba(255,255,255,.08), transparent 60%),
+    radial-gradient(560px 260px at 75% 70%, rgba(225,6,0,.14), transparent 60%),
+    linear-gradient(120deg, transparent 30%, rgba(255,255,255,.10) 45%, transparent 60%);
+  transform:translateX(-35%);
+  animation:cksSvcSweep 7.2s ease-in-out infinite;
+  z-index:1;
+  pointer-events:none;
+}
+@keyframes cksSvcSweep{
+  0%   { transform:translateX(-38%) translateY(-4%); opacity:.55; }
+  50%  { transform:translateX(12%) translateY(2%);  opacity:.85; }
+  100% { transform:translateX(-38%) translateY(-4%); opacity:.55; }
+}
+
+/* GRID */
+.cks-svcGrid{
+  display:grid;
+  grid-template-columns:1.25fr 1fr;
+  gap:18px;
+  margin-top:18px;
+}
+
+.cks-svcCard{
+  background:var(--card);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+}
+
+.cks-svcH2{font-size:18px;margin:0 0 10px 0;color:var(--dark);letter-spacing:-.2px}
+.cks-svcLine{height:3px;width:52px;background:var(--red);border-radius:8px;margin:10px 0 14px}
+.cks-svcP{margin:0 0 12px 0;color:rgba(0,0,0,.72);font-size:15.8px;line-height:1.75}
+.cks-svcBlock{margin-top:16px}
+
+/* Flow */
+.cks-svcFlow{display:grid;gap:12px;margin-top:8px}
+.cks-svcStep{
+  display:grid;
+  grid-template-columns:44px 1fr;
+  gap:12px;
+  padding:14px;
+  border-radius:16px;
+  border:1px solid rgba(0,0,0,.06);
+  background:
+    linear-gradient(180deg, #fff, #fff),
+    radial-gradient(450px 140px at 20% 0%, rgba(225,6,0,.08), transparent 60%);
+  position:relative;
+}
+.cks-svcStep::before{
+  content:"";
+  position:absolute;
+  left:22px;
+  top:-10px;
+  bottom:-10px;
+  width:2px;
+  background:rgba(0,0,0,.06);
+}
+.cks-svcStep:first-child::before{top:22px}
+.cks-svcStep:last-child::before{bottom:22px}
+
+.cks-svcNum{
+  width:44px;height:44px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:1000;color:#fff;
+  background:linear-gradient(180deg,#ff1a12,#e10600);
+  box-shadow:0 12px 24px rgba(225,6,0,.22);
+  position:relative;
+  z-index:1;
+}
+.cks-svcStep b{display:block;color:var(--dark);margin-bottom:3px}
+.cks-svcStep span{display:block;color:var(--muted);font-size:13.5px;line-height:1.5}
+
+/* Tiles */
+.cks-svcTiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}
+.cks-svcTile{
+  display:flex;
+  gap:10px;
+  align-items:flex-start;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.06);
+  padding:12px;
+  border-radius:14px;
+}
+.cks-svcIc{
+  width:36px;height:36px;border-radius:12px;
+  background:rgba(225,6,0,.12);
+  display:flex;align-items:center;justify-content:center;
+  color:var(--red);font-weight:1000;flex:0 0 auto;
+}
+.cks-svcTile b{display:block;color:var(--dark);margin-bottom:2px}
+.cks-svcTile span{display:block;color:var(--muted);font-size:13.5px;line-height:1.5}
+
+/* SIDE */
+.cks-svcSide{
+  background:linear-gradient(180deg,#111,#0c0c0c);
+  color:#fff;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.06);
+  align-self:start;
+  position:sticky;
+  top:110px;
+}
+.cks-svcSide::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;height:4px;width:100%;
+  background:var(--red);
+}
+.cks-svcSide h3{margin:10px 0 6px 0;font-size:18px}
+.cks-svcSide p{margin:0 0 10px 0;color:rgba(255,255,255,.82);line-height:1.6}
+
+.cks-svcMini{font-size:12.5px;color:rgba(255,255,255,.70);margin-top:10px}
+.cks-svcPhone{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.25);
+}
+.cks-svcPhone:hover{border-bottom-color:var(--red)}
+
+/* FORM */
+.cks-svcForm{display:grid;gap:10px;margin-top:12px}
+.cks-svcRow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cks-svcForm input,
+.cks-svcForm textarea,
+.cks-svcForm select{
+  width:100%;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  padding:12px 12px;
+  font-size:14px;
+  outline:none;
+}
+.cks-svcForm input::placeholder,
+.cks-svcForm textarea::placeholder{color:rgba(255,255,255,.60)}
+.cks-svcForm select{appearance:none}
+.cks-svcForm textarea{min-height:110px;resize:vertical}
+
+.cks-svcBtn{
+  border:none;
+  border-radius:12px;
+  padding:12px 14px;
+  font-weight:1000;
+  cursor:pointer;
+  background:linear-gradient(180deg,#ff1a12,#e10600);
+  color:#fff;
+  box-shadow:0 12px 26px rgba(225,6,0,.28);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+}
+.cks-svcBtn[disabled]{opacity:.65;cursor:not-allowed;box-shadow:none}
+
+.cks-svcSpinner{
+  width:16px;height:16px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.35);
+  border-top-color:#fff;
+  animation:cksSvcSpin .8s linear infinite;
+  display:none;
+}
+@keyframes cksSvcSpin{to{transform:rotate(360deg)}}
+
+/* MAP */
+.cks-svcMap{
+  margin-top:14px;
+  border-radius:14px;
+  overflow:hidden;
+  border:1px solid rgba(255,255,255,.10);
+  background:rgba(255,255,255,.04);
+}
+.cks-svcMap iframe{display:block;width:100%;height:240px;border:0}
+
+/* MODALS */
+.cks-svcModal{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.cks-svcBox{
+  background:#fff;
+  border-radius:20px;
+  padding:34px 28px;
+  text-align:center;
+  max-width:460px;
+  width:92%;
+  box-shadow:0 30px 60px rgba(0,0,0,.35);
+  animation:cksSvcPop .22s ease;
+}
+.cks-svcCheck{
+  width:80px;height:80px;border-radius:50%;
+  background:linear-gradient(180deg,#28c76f,#1fa75a);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:44px;font-weight:1000;
+  margin:0 auto 16px;
+  box-shadow:0 12px 30px rgba(40,199,111,.45);
+}
+.cks-svcWarn{
+  width:80px;height:80px;border-radius:50%;
+  background:linear-gradient(180deg,#ffb020,#ff8a00);
+  color:#111;
+  display:flex;align-items:center;justify-content:center;
+  font-size:44px;font-weight:1000;
+  margin:0 auto 16px;
+  box-shadow:0 12px 30px rgba(255,160,0,.35);
+}
+.cks-svcBox h3{margin:0 0 8px 0;font-size:26px;color:#111}
+.cks-svcBox p{margin:0 0 18px 0;color:#555;line-height:1.6}
+.cks-svcClose{
+  border:none;
+  background:#e10600;
+  color:#fff;
+  font-weight:1000;
+  padding:12px 18px;
+  border-radius:12px;
+  cursor:pointer;
+}
+@keyframes cksSvcPop{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* Responsive */
+@media (max-width: 900px){
+  .cks-svcTitle{font-size:30px}
+  .cks-svcGrid{grid-template-columns:1fr}
+  .cks-svcTiles{grid-template-columns:1fr}
+  .cks-svcHeroInner{padding:38px 18px}
+  .cks-svcSide{position:static;top:auto}
+  .cks-svcRow{grid-template-columns:1fr}
+}
+
+/* =========================
+   ADVANCED ELECTRONICS PAGE
+   ========================= */
+.cks-elecPage{
+  --red:#e10600;
+  --dark:#111;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+  --bg:#f6f7f8;
+  --card:#ffffff;
+  color:var(--text);
+}
+
+.cks-elecWrap{padding:44px 0}
+
+/* HERO (BYTER PORSCHE -> "electronics/diagnostics" känsla) */
+.cks-elecHero{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid rgba(0,0,0,.08);
+  background:
+    linear-gradient(135deg, rgba(0,0,0,.78), rgba(0,0,0,.55)),
+    radial-gradient(800px 260px at 80% 10%, rgba(225,6,0,.35), transparent 60%),
+url('https://images.stockcake.com/public/4/e/8/4e8663ce-71ff-4c22-80f5-185575b1b596_large/mechanic-diagnosing-car-stockcake.jpg');
+  background-size:cover;
+  background-position:center;
+}
+
+.cks-elecHeroInner{padding:44px 28px; position:relative; z-index:3;}
+
+.cks-elecKicker{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-weight:900;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  font-size:12px;
+  color:#fff;
+  background:rgba(225,6,0,.16);
+  border:1px solid rgba(225,6,0,.35);
+  padding:8px 12px;
+  border-radius:999px;
+}
+
+.cks-elecTitle{
+  margin:14px 0 8px 0;
+  color:#fff;
+  font-size:38px;
+  line-height:1.08;
+  letter-spacing:-.6px;
+}
+
+.cks-elecSub{
+  margin:0;
+  color:rgba(255,255,255,.86);
+  max-width:860px;
+  font-size:16.5px;
+  line-height:1.65;
+}
+
+/* badges */
+.cks-elecBadges{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+.cks-elecBadge{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:10px 12px;border-radius:999px;
+  background:rgba(0,0,0,.38);
+  border:1px solid rgba(255,255,255,.14);
+  color:#fff;font-weight:900;font-size:13px;
+}
+.cks-elecDot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 0 4px rgba(225,6,0,.18);
+}
+
+/* Electric animation */
+.cks-elecSweep{
+  position:absolute;
+  inset:-45%;
+  z-index:1;
+  pointer-events:none;
+  background:
+    radial-gradient(520px 220px at 70% 30%, rgba(255,255,255,.10), transparent 60%),
+    radial-gradient(700px 360px at 30% 80%, rgba(225,6,0,.18), transparent 62%),
+    linear-gradient(120deg, transparent 35%, rgba(255,255,255,.12) 50%, transparent 65%);
+  transform:translateX(-36%);
+  animation:cksElecSweep 6.8s ease-in-out infinite;
+}
+@keyframes cksElecSweep{
+  0%   { transform:translateX(-38%) translateY(-3%); opacity:.55; }
+  50%  { transform:translateX(14%)  translateY(2%);  opacity:.9; }
+  100% { transform:translateX(-38%) translateY(-3%); opacity:.55; }
+}
+
+/* Subtle "grid glow" overlay */
+.cks-elecGridGlow{
+  position:absolute; inset:0;
+  z-index:2;
+  pointer-events:none;
+  opacity:.20;
+  background:
+    linear-gradient(transparent 0, transparent 2px, rgba(255,255,255,.10) 2px, rgba(255,255,255,.10) 3px, transparent 3px),
+    linear-gradient(90deg, transparent 0, transparent 2px, rgba(255,255,255,.10) 2px, rgba(255,255,255,.10) 3px, transparent 3px);
+  background-size:38px 38px;
+  mask-image: radial-gradient(600px 280px at 70% 35%, #000 45%, transparent 75%);
+}
+
+/* GRID */
+.cks-elecGrid{
+  display:grid;
+  grid-template-columns:1.35fr 1fr;
+  gap:18px;
+  margin-top:18px;
+}
+
+.cks-elecCard{
+  background:var(--card);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+}
+
+.cks-elecH2{font-size:18px;margin:0 0 10px 0;color:var(--dark);letter-spacing:-.2px}
+.cks-elecLine{height:3px;width:52px;background:var(--red);border-radius:8px;margin:10px 0 14px}
+.cks-elecP{margin:0;color:rgba(0,0,0,.72);font-size:15.8px;line-height:1.75}
+
+.cks-elecBlock{margin-top:16px}
+
+/* STEPS */
+.cks-elecSteps{display:grid;gap:10px;margin-top:10px}
+.cks-elecStep{
+  display:flex;gap:12px;align-items:flex-start;
+  background:#fff;border:1px solid rgba(0,0,0,.06);
+  border-radius:14px;padding:14px;
+}
+.cks-elecStepNr{
+  width:44px;height:44px;border-radius:14px;
+  background:linear-gradient(180deg,#ff1a12,#e10600);
+  color:#fff;font-weight:1000;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 10px 22px rgba(225,6,0,.25);
+  flex:0 0 auto;
+}
+.cks-elecStep b{display:block;color:#111;margin-bottom:2px}
+.cks-elecStep span{display:block;color:#666;font-size:13.8px;line-height:1.5}
+
+/* FEATURES */
+.cks-elecFeatures{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.cks-elecFeat{
+  display:flex;gap:10px;align-items:flex-start;background:#fff;border:1px solid rgba(0,0,0,.06);
+  padding:12px;border-radius:14px;
+}
+.cks-elecIc{
+  width:36px;height:36px;border-radius:12px;background:rgba(225,6,0,.12);
+  display:flex;align-items:center;justify-content:center;color:var(--red);font-weight:900;flex:0 0 auto;
+}
+.cks-elecFeat b{display:block;color:var(--dark);margin-bottom:2px}
+.cks-elecFeat span{display:block;color:var(--muted);font-size:13.5px;line-height:1.5}
+
+/* RIGHT SIDE */
+.cks-elecSide{
+  background:linear-gradient(180deg,#111,#0c0c0c);
+  color:#fff;border-radius:16px;padding:18px;
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.06);
+  align-self:start;position:sticky;top:110px;
+}
+.cks-elecSide::before{
+  content:"";position:absolute;left:0;top:0;height:4px;width:100%;background:var(--red);
+}
+.cks-elecSide h3{margin:10px 0 6px 0;font-size:18px}
+.cks-elecSide p{margin:0 0 10px 0;color:rgba(255,255,255,.82);line-height:1.6}
+
+.cks-elecHint{font-size:12.5px;color:rgba(255,255,255,.70);margin-top:10px}
+.cks-elecPhone{
+  color:#fff;text-decoration:none;border-bottom:1px solid rgba(255,255,255,.25);
+}
+.cks-elecPhone:hover{border-bottom-color:var(--red)}
+
+/* FORM */
+.cks-elecForm{display:grid;gap:10px;margin-top:12px}
+.cks-elecRow2{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cks-elecForm input,
+.cks-elecForm textarea,
+.cks-elecForm select{
+  width:100%;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  padding:12px;
+  font-size:14px;
+  outline:none;
+}
+.cks-elecForm input::placeholder,
+.cks-elecForm textarea::placeholder{color:rgba(255,255,255,.60)}
+.cks-elecForm textarea{min-height:120px;resize:vertical}
+
+/* dropdown readability */
+.cks-elecForm select{appearance:none;-webkit-appearance:none}
+.cks-elecForm select option{background:#fff;color:#111}
+
+.cks-elecForm input:focus,
+.cks-elecForm textarea:focus,
+.cks-elecForm select:focus{
+  border-color: rgba(225,6,0,.55);
+  box-shadow: 0 0 0 4px rgba(225,6,0,.12);
+}
+
+.cks-elecBtn{
+  border:none;border-radius:12px;padding:12px 14px;font-weight:900;cursor:pointer;
+  background:linear-gradient(180deg,#ff1a12,#e10600);
+  color:#fff;box-shadow:0 12px 26px rgba(225,6,0,.28);
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+}
+.cks-elecBtn[disabled]{opacity:.65;cursor:not-allowed}
+
+.cks-elecSpinner{
+  width:16px;height:16px;border-radius:50%;
+  border:2px solid rgba(255,255,255,.35);
+  border-top-color:#fff;
+  display:none;
+  animation:cksElecSpin .8s linear infinite;
+}
+@keyframes cksElecSpin{to{transform:rotate(360deg)}}
+
+/* MAP */
+.cks-elecMap{
+  margin-top:14px;border-radius:14px;overflow:hidden;border:1px solid rgba(255,255,255,.10)
+}
+.cks-elecMap iframe{display:block;width:100%;height:220px;border:0}
+
+/* MODALS */
+.cks-elecModal{
+  position:fixed;inset:0;background:rgba(0,0,0,.65);
+  display:none;align-items:center;justify-content:center;z-index:9999;
+}
+.cks-elecModalBox{
+  background:#fff;border-radius:20px;padding:30px 26px;text-align:center;
+  max-width:460px;width:92%;box-shadow:0 30px 60px rgba(0,0,0,.35);
+  animation:cksElecPop .22s ease;
+}
+@keyframes cksElecPop{from{transform:scale(.95);opacity:0}to{transform:scale(1);opacity:1}}
+
+.cks-elecCheck{
+  width:78px;height:78px;border-radius:50%;
+  background:linear-gradient(180deg,#28c76f,#1fa75a);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:44px;font-weight:1000;margin:0 auto 14px;
+  box-shadow:0 12px 30px rgba(40,199,111,.45);
+}
+.cks-elecWarn{
+  width:78px;height:78px;border-radius:50%;
+  background:linear-gradient(180deg,#ffb020,#f39c12);color:#111;
+  display:flex;align-items:center;justify-content:center;
+  font-size:44px;font-weight:1000;margin:0 auto 14px;
+  box-shadow:0 12px 30px rgba(243,156,18,.35);
+}
+.cks-elecModalBox h3{margin:0 0 8px 0;font-size:24px;color:#111}
+.cks-elecModalBox p{margin:0 0 16px 0;color:#555;line-height:1.6}
+.cks-elecModalClose{
+  border:none;background:#e10600;color:#fff;font-weight:900;
+  padding:12px 18px;border-radius:12px;cursor:pointer;
+}
+
+/* Responsive */
+@media (max-width: 900px){
+  .cks-elecTitle{font-size:30px}
+  .cks-elecGrid{grid-template-columns:1fr}
+  .cks-elecFeatures{grid-template-columns:1fr}
+  .cks-elecRow2{grid-template-columns:1fr}
+  .cks-elecHeroInner{padding:38px 18px}
+  .cks-elecSide{position:static;top:auto}
+}
+
+/* =========================
+   TYRE / DÄCKSERVICE PAGE
+   ========================= */
+.cks-tyrePage{
+  --red:#e10600;
+  --dark:#111;
+  --text:#2b2b2b;
+  --muted:#6b6b6b;
+  --bg:#f6f7f8;
+  --card:#ffffff;
+  color:var(--text);
+}
+
+.cks-tyreWrap{padding:44px 0}
+
+/* HERO */
+.cks-tyreHero{
+  position:relative;
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid rgba(0,0,0,.08);
+  background:
+    linear-gradient(135deg, rgba(0,0,0,.78), rgba(0,0,0,.55)),
+    radial-gradient(800px 260px at 80% 10%, rgba(225,6,0,.35), transparent 60%),
+    url('https://images.unsplash.com/photo-1553440569-bcc63803a83d?auto=format&fit=crop&w=1600&q=70');
+  background-size:cover;
+  background-position:center;
+}
+
+.cks-tyreHeroInner{padding:44px 28px; position:relative; z-index:2;}
+
+.cks-tyreKicker{
+  display:inline-flex;
+  gap:8px;
+  align-items:center;
+  font-weight:800;
+  letter-spacing:.8px;
+  text-transform:uppercase;
+  font-size:12px;
+  color:#fff;
+  background:rgba(225,6,0,.16);
+  border:1px solid rgba(225,6,0,.35);
+  padding:8px 12px;
+  border-radius:999px;
+}
+
+.cks-tyreTitle{
+  margin:14px 0 8px 0;
+  color:#fff;
+  font-size:38px;
+  line-height:1.08;
+  letter-spacing:-.6px;
+}
+
+.cks-tyreSub{
+  margin:0;
+  color:rgba(255,255,255,.86);
+  max-width:780px;
+  font-size:16.5px;
+  line-height:1.65;
+}
+
+/* small animated sweep */
+.cks-tyreSweep{
+  position:absolute;
+  inset:-40%;
+  background:
+    radial-gradient(420px 180px at 70% 30%, rgba(255,255,255,.08), transparent 60%),
+    radial-gradient(520px 260px at 25% 75%, rgba(225,6,0,.14), transparent 60%),
+    linear-gradient(120deg, transparent 30%, rgba(255,255,255,.10) 45%, transparent 60%);
+  transform:translateX(-35%);
+  animation:cksTyreSweep 8s ease-in-out infinite;
+  z-index:1;
+  pointer-events:none;
+}
+@keyframes cksTyreSweep{
+  0%   { transform:translateX(-38%) translateY(-4%); opacity:.55; }
+  50%  { transform:translateX(10%) translateY(3%);  opacity:.85; }
+  100% { transform:translateX(-38%) translateY(-4%); opacity:.55; }
+}
+
+.cks-tyreStats{
+  margin-top:16px;
+  display:grid;
+  grid-template-columns:repeat(3, minmax(0,1fr));
+  gap:10px;
+  max-width:780px;
+}
+.cks-tyreStat{
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.14);
+  border-radius:14px;
+  padding:12px 14px;
+  color:#fff;
+}
+.cks-tyreStatTop{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:900;
+  margin-bottom:4px;
+}
+.cks-tyreStat span{color:rgba(255,255,255,.85); font-weight:700; font-size:13.5px}
+
+.cks-tyrePulse{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 0 0 rgba(225,6,0,.0);
+  animation:cksPulse 1.8s ease-in-out infinite;
+}
+@keyframes cksPulse{
+  0%   { box-shadow:0 0 0 0 rgba(225,6,0,.0); opacity:.9; }
+  60%  { box-shadow:0 0 0 10px rgba(225,6,0,.12); opacity:1; }
+  100% { box-shadow:0 0 0 0 rgba(225,6,0,.0); opacity:.9; }
+}
+
+.cks-tyreHeroActions{margin-top:14px; display:flex; gap:10px; flex-wrap:wrap}
+
+/* GRID */
+.cks-tyreGrid{
+  display:grid;
+  grid-template-columns:1.35fr 1fr;
+  gap:18px;
+  margin-top:18px;
+}
+
+.cks-tyreCard{
+  background:var(--card);
+  border:1px solid rgba(0,0,0,.06);
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 12px 28px rgba(0,0,0,.06);
+}
+
+.cks-tyreH2{font-size:18px;margin:0 0 10px 0;color:var(--dark)}
+.cks-tyreLine{height:3px;width:52px;background:var(--red);border-radius:8px;margin:10px 0 14px}
+.cks-tyreP{margin:0 0 12px 0;color:rgba(0,0,0,.72);font-size:15.8px;line-height:1.75}
+
+.cks-tyreChips{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+.cks-tyreChip{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:var(--bg);
+  border:1px solid rgba(0,0,0,.06);
+  padding:10px 12px;
+  border-radius:14px;
+  font-weight:800;
+  color:var(--dark);
+  font-size:13.5px;
+}
+.cks-tyreDot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--red);
+  box-shadow:0 0 0 4px rgba(225,6,0,.14);
+}
+
+.cks-tyreBlock{margin-top:16px}
+
+.cks-tyreCallout{
+  margin-top:12px;
+  display:flex;
+  gap:12px;
+  align-items:flex-start;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:16px;
+  padding:14px;
+  box-shadow:0 10px 22px rgba(0,0,0,.06);
+}
+.cks-tyreCalloutIcon{
+  width:42px;height:42px;border-radius:14px;
+  background:rgba(225,6,0,.10);
+  border:1px solid rgba(225,6,0,.18);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:900;
+}
+.cks-tyreCallout b{display:block; color:var(--dark); margin-bottom:2px}
+.cks-tyreCallout span{display:block; color:rgba(0,0,0,.72); font-weight:700}
+.cks-tyreCalloutSmall{margin-top:6px; color:rgba(0,0,0,.66); font-size:13.8px; line-height:1.55}
+
+.cks-tyreInlineLink{
+  color:inherit;
+  text-decoration:none;
+  border-bottom:1px solid rgba(0,0,0,.28);
+}
+.cks-tyreInlineLink:hover{border-bottom-color:var(--red)}
+
+/* SIDE */
+.cks-tyreSide{
+  background:linear-gradient(180deg,#111,#0c0c0c);
+  color:#fff;
+  border-radius:16px;
+  padding:18px;
+  box-shadow:0 14px 34px rgba(0,0,0,.22);
+  border:1px solid rgba(255,255,255,.06);
+  position:sticky;
+  top:110px;
+  align-self:start;
+}
+.cks-tyreSide::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;
+  height:4px;width:100%;
+  background:var(--red);
+}
+.cks-tyreSide h3{margin:10px 0 6px 0;font-size:18px}
+.cks-tyreSide p{margin:0 0 10px 0;color:rgba(255,255,255,.82);line-height:1.6}
+
+/* FORM */
+.cks-tyreForm{display:grid;gap:10px;margin-top:12px}
+.cks-tyreRow{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.cks-tyreForm input,
+.cks-tyreForm textarea{
+  width:100%;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(255,255,255,.06);
+  color:#fff;
+  padding:12px;
+  font-size:14px;
+  outline:none;
+}
+.cks-tyreForm input::placeholder,
+.cks-tyreForm textarea::placeholder{color:rgba(255,255,255,.60)}
+.cks-tyreForm textarea{min-height:110px;resize:vertical}
+
+.cks-tyreBtn{
+  border:none;
+  border-radius:12px;
+  padding:12px 14px;
+  font-weight:900;
+  cursor:pointer;
+  background:linear-gradient(180deg,#ff1a12,#e10600);
+  color:#fff;
+  box-shadow:0 12px 26px rgba(225,6,0,.28);
+}
+.cks-tyreBtn:hover{filter:brightness(.97)}
+
+.cks-tyreHint{font-size:12.5px;color:rgba(255,255,255,.70);margin-top:8px}
+.cks-tyrePhone{
+  color:#fff;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.25);
+}
+.cks-tyrePhone:hover{border-bottom-color:var(--red)}
+
+/* SUCCESS MODAL */
+.cks-tyreSuccess{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.65);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+}
+.cks-tyreSuccessBox{
+  background:#fff;
+  border-radius:20px;
+  padding:34px 28px;
+  text-align:center;
+  max-width:460px;
+  width:92%;
+  box-shadow:0 30px 60px rgba(0,0,0,.35);
+  animation:cksTyrePop .25s ease;
+}
+.cks-tyreCheck{
+  width:80px;height:80px;border-radius:50%;
+  background:linear-gradient(180deg,#28c76f,#1fa75a);
+  color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:44px;font-weight:900;
+  margin:0 auto 16px;
+  box-shadow:0 12px 30px rgba(40,199,111,.45);
+}
+.cks-tyreSuccessBox h3{margin:0 0 8px 0;font-size:26px;color:#111}
+.cks-tyreSuccessBox p{margin:0 0 18px 0;color:#555;line-height:1.6}
+.cks-tyreClose{
+  border:none;
+  background:#e10600;
+  color:#fff;
+  font-weight:900;
+  padding:12px 18px;
+  border-radius:12px;
+  cursor:pointer;
+}
+@keyframes cksTyrePop{from{transform:scale(.9);opacity:0}to{transform:scale(1);opacity:1}}
+
+/* Responsive */
+@media (max-width: 900px){
+  .cks-tyreTitle{font-size:30px}
+  .cks-tyreGrid{grid-template-columns:1fr}
+  .cks-tyreHeroInner{padding:38px 18px}
+  .cks-tyreSide{position:static;top:auto}
+  .cks-tyreRow{grid-template-columns:1fr}
+  .cks-tyreStats{grid-template-columns:1fr}
+}

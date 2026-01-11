@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>BMW Retrofit – CKS Bil & Motor</title>
+  <meta name="description" content="BMW retrofit i Uppsala. Originalkodning, OEM-komponenter och korrekt montering – trygg uppgradering av din BMW." />
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+
+  <!-- Header injectas -->
+  <div id="site-header"></div>
+
+  <main class="cks-bmwPage">
+    <div class="wrap cks-bmwWrap">
+
+      <!-- HERO -->
+      <section class="cks-bmwHero" aria-label="BMW Retrofit hero">
+        <div class="cks-bmwHeroInner">
+          <div class="cks-bmwKicker">
+            <img
+              src="https://www.cksbil.se/wp-content/uploads/2018/02/cropped-bmw-Quick-Preset_150x150.jpg"
+              alt="BMW"
+              class="cks-bmwIcon"
+              loading="lazy"
+            />
+            BMW Retrofit
+          </div>
+
+          <h1 class="cks-bmwTitle">Uppgradera din BMW med original</h1>
+          <p class="cks-bmwSub">
+            Vi arbetar med originala BMW-produkter och mjukvaror för en trygg, snygg och korrekt retrofit-lösning.
+          </p>
+
+          <div class="cks-bmwQuick">
+            <div class="cks-bmwQuickItem"><span class="cks-bmwDot"></span> Originalkodning & funktioner</div>
+            <div class="cks-bmwQuickItem"><span class="cks-bmwDot"></span> OEM-komponenter & korrekt montering</div>
+            <div class="cks-bmwQuickItem"><span class="cks-bmwDot"></span> Tydlig plan + pris innan start</div>
+          </div>
+        </div>
+
+        <!-- Subtil “moving” light sweep (CSS animation) -->
+        <div class="cks-bmwSweep" aria-hidden="true"></div>
+      </section>
+
+      <!-- GRID -->
+      <section class="cks-bmwGrid" aria-label="BMW Retrofit innehåll">
+        <!-- LEFT -->
+        <div class="cks-bmwCard">
+          <h2 class="cks-bmwH2">Exempel på retrofits</h2>
+          <div class="cks-bmwLine"></div>
+
+          <div class="cks-bmwItems">
+            <div class="cks-bmwItem">
+              <div class="cks-bmwIc">🖥️</div>
+              <div><b>NBT / NBT EVO</b><span>Uppgradering av infotainment.</span></div>
+            </div>
+            <div class="cks-bmwItem">
+              <div class="cks-bmwIc">📍</div>
+              <div><b>GPS i originalskärm</b><span>Navigation direkt i BMW-skärmen.</span></div>
+            </div>
+            <div class="cks-bmwItem">
+              <div class="cks-bmwIc">📺</div>
+              <div><b>Stor skärm</b><span>Byte från liten till stor display.</span></div>
+            </div>
+            <div class="cks-bmwItem">
+              <div class="cks-bmwIc">📊</div>
+              <div><b>6WB Digital panel</b><span>Full digital instrumentpanel.</span></div>
+            </div>
+            <div class="cks-bmwItem">
+              <div class="cks-bmwIc">🎵</div>
+              <div><b>Combox</b><span>Bluetooth streaming i bilen.</span></div>
+            </div>
+            <div class="cks-bmwItem">
+              <div class="cks-bmwIc">💡</div>
+              <div><b>Vita LED</b><span>Stilren belysning i instrumentpanel.</span></div>
+            </div>
+          </div>
+
+          <div class="cks-bmwBlock">
+            <h2 class="cks-bmwH2">Hittar du inte det du söker?</h2>
+            <div class="cks-bmwLine"></div>
+            <p class="cks-bmwP">
+              Skicka en förfrågan via formuläret så återkommer vi med en lösning.
+              Ju mer info du skriver, desto snabbare kan vi ge rätt svar.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT -->
+        <aside class="cks-bmwSide" aria-label="BMW Retrofit förfrågan">
+          <h3>Skicka förfrågan</h3>
+          <p>Fyll i regnr och vad du vill uppgradera, så återkommer vi inom 24–48 timmar.</p>
+
+          <!-- OBS: statisk sida -> vi visar modal “Skickat!” (ingen e-post skickas ännu) -->
+          <form id="bmwForm" class="cks-bmwForm">
+            <div class="cks-bmwRow">
+              <input type="text" name="Namn" placeholder="Ditt namn" required>
+              <input type="email" name="E-post" placeholder="Din e-post" required>
+            </div>
+
+            <input
+              type="text"
+              name="Regnr"
+              id="bmwRegnr"
+              placeholder="Regnr (ABC123 / ABC12A)"
+              required
+              autocomplete="off"
+              autocapitalize="characters"
+              maxlength="6"
+              pattern="^[A-Za-z]{3}[0-9]{2}[0-9A-Za-z]{1}$"
+              title="Skriv regnummer som ABC123 eller ABC12A (3 bokstäver + 3 tecken, sista kan vara bokstav)."
+            >
+
+            <input type="text" name="Ämne" placeholder="T.ex. NBT EVO, GPS, 6WB, Combox…" required>
+            <textarea name="Meddelande" placeholder="Beskriv vad du vill retrofita/uppgradera..." required></textarea>
+
+            <button class="cks-bmwBtn" type="submit">Skicka</button>
+          </form>
+
+          <div class="cks-bmwHint">
+            ✉️ Skickas till <b>info@cksbil.se</b><br>
+            📞 <a class="cks-bmwPhone" href="tel:0762948775">076 – 294 87 75</a>
+          </div>
+        </aside>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- SUCCESS MODAL -->
+  <div id="bmwSuccess" class="cks-bmwSuccess" aria-hidden="true">
+    <div class="cks-bmwSuccessBox" role="dialog" aria-modal="true" aria-label="Skickat">
+      <div class="cks-bmwCheck">✓</div>
+      <h3>Skickat!</h3>
+      <p>Vi har tagit emot din förfrågan<br>och återkommer inom 24–48 timmar.</p>
+      <button type="button" class="cks-bmwClose" id="bmwCloseBtn">Stäng</button>
+    </div>
+  </div>
+
+  <!-- Footer injectas -->
+  <div id="site-footer"></div>
+
+  <script src="./include.js"></script>
+  <script src="./app.js"></script>
+
+  <!-- Page script (statisk demo-submit + modal) -->
+  <script>
+    (function(){
+      const form = document.getElementById('bmwForm');
+      const reg = document.getElementById('bmwRegnr');
+      const modal = document.getElementById('bmwSuccess');
+      const closeBtn = document.getElementById('bmwCloseBtn');
+
+      if(reg){
+        reg.addEventListener('input', () => {
+          reg.value = reg.value.replace(/\s+/g,'').toUpperCase();
+        });
+      }
+
+      function openModal(){
+        if(!modal) return;
+        modal.style.display = 'flex';
+        modal.setAttribute('aria-hidden','false');
+      }
+      function closeModal(){
+        if(!modal) return;
+        modal.style.display = 'none';
+        modal.setAttribute('aria-hidden','true');
+      }
+
+      if(form){
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          if(!form.checkValidity()){
+            form.reportValidity();
+            return;
+          }
+          // Demo: visar bara “Skickat!”
+          openModal();
+          form.reset();
+        });
+      }
+
+      if(closeBtn) closeBtn.addEventListener('click', closeModal);
+      if(modal){
+        modal.addEventListener('click', (e) => { if(e.target === modal) closeModal(); });
+      }
+
+      // ESC stänger
+      document.addEventListener('keydown', (e) => {
+        if(e.key === 'Escape') closeModal();
+      });
+    })();
+  </script>
+
+</body>
+</html>
