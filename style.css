@@ -354,7 +354,6 @@ p{margin:0 0 14px}
   height:auto;         /* ingen “stretch” */
   max-height:320px;    /* kontroll på höjd */
   object-fit:contain;  /* logga ska INTE beskäras */
-  padding:18px;        /* luft runt loggan */
   background:#fff;     /* ser proffsigt ut */
   border-radius:var(--radius);
   border:1px solid rgba(0,0,0,.06);
